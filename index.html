@@ -290,34 +290,74 @@
                     <ol>
                         <li>Cambia a la rama master:</li>
                         <pre><code>git checkout master</code></pre>
+                        <p>
+                            En mi caso no funciono y me saco el siguiente error
+                        </p>
+                        <pre><code>error: pathspec 'master' did not match any file(s) known to git</code></pre>
                         <p>El error que me aparece se puede deber a dos motivos el primero es que en Git, la rama principal ya no se llama master en muchos casos. A partir de Git versión 2.28, la rama por defecto cambió a main, como parte de un esfuerzo por adoptar un lenguaje más inclusivo.
-                            Para solucionar este problema, puedes hacer lo siguiente:
+                            Para solucionar este problema, puedes hacer lo siguiente:<br>
                             Verifica el nombre de la rama principal por defecto en tu repositorio ejecutando el siguiente comando:
                         </p>
                         <pre><code>git branch</code></pre>
-                        <p>El segundo es porque Esto puede suceder porque acabas de inicializar el repositorio (git init) y aún no has realizado ningún commit. Para poder cambiar entre ramas, primero necesitas tener al menos un commit en la rama principal.</p>
+                        <p>El segundo es porque acabo de inicializar el repositorio (git init) y aún no he realizado ningún commit. Para poder cambiar entre ramas, primero necesito tener al menos un commit en la rama principal.</p>
                         <pre><code>git commit -m "Initial commit"</code></pre>
                         <img src="images/commitInicial.PNG" alt="Primer Commit">
+
+                        <p>El mensaje te indica que no se ha añadido ningún archivo para el commit porque tienes archivos sin seguimiento ("untracked files"). Para solucionarlo, sigue estos pasos:</p>
+                        <ol>
+                            <li>Añadir los archivos no rastreados (como images/ e index.html) para que Git los incluya en el commit:</li>
+                            <pre><code>git add .</code></pre>
+                            <p>El punto (.) indica que estás añadiendo todos los archivos no rastreados en el directorio actual.</p>
+                            <li>Hacer el commit nuevamente una vez que hayas agregado los archivos:</li>
+                            <pre><code>git commit -m "Initial commit"</code></pre>
+                            <img src="images/commitInicial2.PNG" alt="Primer Commit">
+                        </ol>
+                        <p>Una vez realizado el Commit procedemos nuevamente a cambiar a la rama master con:</p>
+                        <pre><code>git checkout master</code></pre>
+                        <br>
+                        <p>En mi caso particular me saca el error "git checkout main
+                            error: pathspec 'main' did not match any file(s) known to git" al intentar hacer git checkout master se debe a que la rama master no existe en mi repositorio. Esto puede suceder porque, en las versiones más recientes de Git, el nombre predeterminado de la rama principal es main, no master.<br>
+                            Aquí tienes lo que puedes hacer a continuación:<br>
+                            <ol>
+                                <li>
+                                    Verificar las ramas existentes: Para confirmar qué ramas tienes, ejecuta el siguiente comando:
+                                </li>
+                                <pre><code>git branch</code></pre>
+                                <li>Crear la rama main (si no existe): Si ves que no existe una rama principal (main o master), puedes crearla manualmente desde tu rama actual:</li>
+                                <pre><code>git checkout -b main</code></pre>
+                                <li>Fusionar la rama feature/ramasegundaria en main: Si quieres fusionar los cambios de tu rama feature/ramasegundaria en main, primero asegúrate de estar en main:</li>
+                                <pre><code>git checkout main</code></pre>
+                                <li>Finalmente, fusiona los cambios:</li>
+                            </ol>
+                        </p>
+
                         <li>Fusiona la rama 'feature' con 'master':</li>
-                        <pre><code>git merge feature</code></pre>
+                        <pre><code>git merge feature/ramasegundaria</code></pre>
                     </ol>
-                    <img src="images/git-merge.png" alt="Fusión de ramas en Git">
+                    <img src="images/mergeRamasegundaria.PNG" alt="Fusión de ramas en Git">
                 </article>
     
                 <article>
                     <h3>Agregar un Repositorio Remoto</h3>
                     <p>Para conectar tu repositorio local con uno remoto en GitHub:</p>
                     <ol>
-                        <li>Crea un nuevo repositorio en GitHub (sin inicializarlo con un README).</li>
+                        <li>Crea un nuevo repositorio en GitHub una vez creada la cuenta y allás iniciado sesión (sin inicializarlo con un README).</li>
+                        <img src="images/repositorio.PNG" alt="Crea un nuevo repositorio en GitHub">
+                        <img src="images/repositorio2.PNG" alt="Crea un nuevo repositorio en GitHub">
                         <li>Copia la URL del repositorio.</li>
+                        <img src="images/CopyLink.PNG" alt="Copia la URL del repositorio.">
                         <li>En tu terminal, ejecuta:</li>
                     </ol>
                     <pre><code>git remote add origin URL-del-repositorio</code></pre>
                     <p>Para verificar que se ha agregado correctamente:</p>
                     <pre><code>git remote -v</code></pre>
+                    <img src="images/git-remote.png" alt="Agregar repositorio remoto en Git">
                     <p>Para subir tus cambios al repositorio remoto:</p>
                     <pre><code>git push -u origin master</code></pre>
-                    <img src="images/git-remote.png" alt="Agregar repositorio remoto en Git">
+                    <img src="images/git-push.png" alt="Agregar repositorio remoto en Git">
+                    <p>Si validamos el repositorio ya se encuentra lleno</p>
+                    <img src="images/repositorio3.png" alt="Agregar repositorio remoto en Git">
+                    
                 </article>
             </section>
         </section>
