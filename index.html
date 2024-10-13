@@ -213,12 +213,12 @@
         
             <article>
                 <h3>¿Qué es el Hardware?</h3>
-                <p>El hardware se refiere a todos los componentes físicos que conforman un sistema informático. Esto incluye dispositivos como el monitor, teclado, disco duro, y la unidad central de procesamiento (CPU), entre otros. A diferencia del software, el hardware es tangible y esencial para que cualquier sistema funcione correctamente.</p>
+                <p>El hardware se refiere a todos los componentes físicos que conforman un sistema informático. Esto incluye dispositivos como el monitor, teclado, disco duro y la unidad central de procesamiento (CPU), entre otros. A diferencia del software, el hardware es tangible y esencial para que cualquier sistema funcione correctamente.</p>
                 <img src="images/Componentes de hardware básico.jpg" alt="Componentes de hardware básico">
                 <p>El hardware puede clasificarse en varias categorías, incluyendo hardware de entrada, hardware de salida, hardware de almacenamiento y hardware de procesamiento. Cada uno de estos componentes juega un papel crucial en el funcionamiento general del sistema. Sin hardware, el software no podría ejecutarse, ya que el hardware proporciona la infraestructura física necesaria.</p>
-                <p>Es importante entender que el hardware ha evolucionado a lo largo del tiempo, mejorando en términos de velocidad, eficiencia energética, y capacidad. Estos avances han permitido que las computadoras modernas realicen tareas cada vez más complejas.</p>
+                <p>Es importante entender que el hardware ha evolucionado a lo largo del tiempo, mejorando en términos de velocidad, eficiencia energética y capacidad. Estos avances han permitido que las computadoras modernas realicen tareas cada vez más complejas.</p>
             </article>
-        
+            
             <article>
                 <h3>Tipos de Hardware</h3>
                 <p>Existen varios tipos de hardware que se pueden clasificar en función de su función dentro del sistema. Los más comunes son:</p>
@@ -227,7 +227,7 @@
                     <img src="images/Dispositivos de entrada.jpg" alt="Dispositivos de entrada">
                     <li><strong>Hardware de salida:</strong> Dispositivos como la pantalla y la impresora que muestran o producen resultados del procesamiento del sistema.</li>
                     <img src="images/Salida.PNG" alt="Dispositivos de salida">
-                    <li><strong>Hardware de almacenamiento:</strong> Dispositivos como los discos duros y SSDs que almacenan datos y programas.</li>
+                    <li><strong>Hardware de almacenamiento:</strong> Dispositivos como los discos duros y SSD que almacenan datos y programas.</li>
                     <img src="images/Hardware-de-almacenamiento.webp" alt="Dispositivos de almacenamiento">
                     <li><strong>Hardware de procesamiento:</strong> Componentes como la CPU y la GPU que realizan cálculos y ejecutan programas.</li>
                     <img src="images/A-procesar.webp" alt="Componentes de procesamiento">
@@ -235,10 +235,10 @@
                 <p>Además, existen otros tipos de hardware especializados, como las tarjetas de red, que permiten la comunicación entre dispositivos, y las fuentes de alimentación, que proporcionan energía a todos los componentes del sistema.</p>
                 <p>El conocimiento sobre los diferentes tipos de hardware es esencial para cualquier persona que desee entender el funcionamiento interno de un computador o desarrollar habilidades en el ensamblaje y mantenimiento de equipos.</p>
             </article>
-        
+            
             <article>
                 <h3>Importancia del Hardware</h3>
-                <p>El hardware es crucial para el funcionamiento de cualquier dispositivo informático. Sin hardware, el software no tendría una plataforma para ejecutarse, lo que significa que no podríamos utilizar computadoras, teléfonos móviles, o cualquier otro dispositivo electrónico. Además, la calidad y capacidad del hardware determinan en gran medida el rendimiento y la eficiencia del sistema en su conjunto.</p>
+                <p>El hardware es crucial para el funcionamiento de cualquier dispositivo informático. Sin hardware, el software no tendría una plataforma para ejecutarse, lo que significa que no podríamos utilizar computadoras, teléfonos móviles o cualquier otro dispositivo electrónico. Además, la calidad y capacidad del hardware determinan en gran medida el rendimiento y la eficiencia del sistema en su conjunto.</p>
                 <img src="images/pc.jpg" alt="Importancia del hardware">
                 <p>La evolución del hardware ha permitido avances significativos en la tecnología, desde la creación de computadoras más rápidas y eficientes hasta el desarrollo de dispositivos móviles potentes y compactos. La innovación en hardware continúa impulsando el progreso en diversas áreas, incluyendo la inteligencia artificial, la realidad virtual y la computación en la nube.</p>
             </article>
@@ -358,6 +358,56 @@
                     <p>Si validamos el repositorio ya se encuentra lleno</p>
                     <img src="images/repositorio3.png" alt="Agregar repositorio remoto en Git">
                     
+                </article>
+                <article>
+                    <h3>Gráficos Computacionales de Funciones</h3>
+                    <p>Una función puede entenderse como la representación abstracta de una máquina que recibe un valor de entrada y lo transforma en un valor de salida según una regla determinada. Por ejemplo, la función <em>f(x) = x²</em> devuelve el cuadrado de todo lo que recibe: <em>f(2) = 2²</em>; <em>f(5) = 5²</em>; o incluso <em>f(~) = ~²</em>. Sin embargo, <em>f(x) = x²</em> no es la única manera de representar esta función. También podemos pensarla como un gráfico computacional.</p>
+                    
+                    <p>En esta representación, las entradas son <strong>links</strong> y las operaciones son nodos. Asignemos algunos valores a nuestro gráfico computacional. Por ejemplo, si <em>x = 2</em>, los valores de <em>x = 2</em> se propagan a través de los enlaces y son transformados en el nodo <em>*</em>, de donde sale el valor de salida 4.</p>
+                    
+                    <figure>
+                        <img src="images/figura80.png" alt="Gráfico Computacional de f(x) = x²">
+                        <figcaption>Figura 80: Gráfico computacional de la función f(x) = x².</figcaption>
+                    </figure>
+                    
+                    <p>Reto: ¿Qué función representa el gráfico de la figura?</p>
+                
+                    <h4>4.1.1 Gráfico Computacional del Modelo de Regresión Lineal</h4>
+                    <p>La función de regresión lineal se puede representar como <em>y^ = w0 + w1x1 + ... + wnxn</em>. Una opción sería utilizar un gráfico computacional similar al anterior.</p>
+                
+                    <figure>
+                        <img src="images/figura81.png" alt="Diagrama de Regresión Lineal">
+                        <figcaption>Figura 81: Diagrama del modelo de regresión lineal.</figcaption>
+                    </figure>
+                
+                    <p>Podemos simplificar el diagrama juntando links y nodos en un solo símbolo.</p>
+                    
+                    <figure>
+                        <img src="images/figura82.png" alt="Diagrama Simplificado de Regresión Lineal">
+                        <figcaption>Figura 82: Diagrama simplificado de la regresión lineal.</figcaption>
+                    </figure>
+                
+                    <h4>4.1.2 Gráfico Computacional del Modelo de Regresión Logística</h4>
+                    <p>El modelo de regresión logística consiste en comprimir la suma ponderada del modelo de regresión lineal a través de una función de activación. Una representación adecuada sería el diagrama de regresión lineal, seguido de un diagrama de compresión logística.</p>
+                
+                    <figure>
+                        <img src="images/figura83.png" alt="Diagrama de Regresión Logística">
+                        <figcaption>Figura 83: Diagrama del modelo de regresión logística.</figcaption>
+                    </figure>
+                
+                    <p>Las propiedades computacionales de estos diagramas se han resumido en modelos matemáticos simples conocidos como redes neuronales artificiales. Estos modelos se basan en las propiedades de una sola neurona que realiza combinaciones lineales de las salidas de otras neuronas, que son después transformadas mediante una función no lineal.</p>
+                    
+                    <p>Matemáticamente, estos modelos se pueden describir como:</p>
+                    <pre><code>y = f(Σ(wi * xi))</code></pre>
+                    
+                    <p>donde <em>x1, ..., xm</em> representan las entradas correspondientes a las actividades de otras neuronas. A la cantidad <em>a = Σ(wi * xi)</em> se le llama pre-activación, mientras que la función no lineal <em>f()</em> se llama función de activación, y la salida <em>y</em> se llama activación. Esta formulación matemática es la base del modelo de redes neuronales.</p>
+                
+                    <figure>
+                        <img src="images/red_neuronal.png" alt="Diagrama de una Neurona en una Red Neuronal">
+                        <figcaption>Diagrama representativo de una neurona en una red neuronal.</figcaption>
+                    </figure>
+                
+                    <p>En la literatura, es común omitir el símbolo de transformación y representar una neurona simplemente como un diagrama donde cada link tiene el significado implícito de la transformación representada.</p>
                 </article>
             </section>
         </section>
